@@ -19,6 +19,7 @@ defineProps({
 </template>
 
 <style scoped>
+
 h1 {
   font-weight: 500;
   font-size: 2.6rem;
@@ -33,6 +34,10 @@ h3 {
 .greetings h1,
 .greetings h3 {
   text-align: center;
+}
+
+.greetings h3 {
+color: rgb(235, 231, 231);
 }
 
 @media (min-width: 1024px) {
