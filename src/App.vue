@@ -1,5 +1,19 @@
 <script setup>
+import { ref } from "vue";
 import HelloWorld from "./components/HelloWorld.vue";
+
+// state (like data)
+const dropdownVisible = ref(false);
+
+/* // toggle
+const toggleDropdown = () => {
+  dropdownVisible.value = !dropdownVisible.value;
+}
+
+// computed class
+const dropdownChoice = computed(() => {
+  return dropdownVisible.value ? "dropdown-menu-visible" : 'dropdown-menu-hidden';
+})   */
 </script>
 
 <template>
@@ -16,23 +30,29 @@ import HelloWorld from "./components/HelloWorld.vue";
       <HelloWorld msg="Little plane book" />
     </div>
   </header>
-
+<!-- idea: make type of planes in a select. Wirte a json file abput different planes type and use it to display info -->
   <main>
     <nav>
       <ul>
         <li>
-          <a href="./">About planes</a>
+          <router-link to="/">About planes</router-link>
+        </li>
+        <li @click="toggleDropdown" class="dropdown">
+          <span>Aircraft types</span>
+          <ul class="dropdown-menu" :class="dropdownChoice">
+            <li><router-link to="/jets">Jets</router-link></li>
+            <li><router-link to="/helicopters">Helicopters</router-link></li>
+            <li><router-link to="/gliders">Gliders</router-link></li>
+          </ul>
+          <router-link to="/aircrafts-types">Aircraft types</router-link>
         </li>
         <li>
-          <a href> Aircraft types</a>
-        </li>
-        <li>
-          <a href>Planes you travel with</a>
+          <router-link to="/planes-you-travel-with">Planes you travel with</router-link>
         </li>
       </ul>
     </nav>
     <section>
-      <div></div>
+      <router-view />
     </section>
   </main>
 </template>
@@ -91,5 +111,7 @@ header {
     justify-content: space-between;
     background-color: aqua;
   }
+
+  
 }
 </style>

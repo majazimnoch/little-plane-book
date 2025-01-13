@@ -1,6 +1,6 @@
 <template>
     <div>
-      <h1>About Planes</h1>
-      <p>Learn all about planes here!</p>
+      <h1>Aircraft types</h1>
+      <p>Learn all about Aircraft types here!</p>
     </div>
   </template>
