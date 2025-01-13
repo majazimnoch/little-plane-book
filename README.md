@@ -1,14 +1,13 @@
 # little-plane-book
 
-This template should help get you started developing with Vue 3 in Vite.
+This is a hobby project dedicated to one of my many passions: planes! I want to grow this project gradually, simultanously with my knowledge about aviation.
 
-## Recommended IDE Setup
+## tech stuff
+I'm using Vue, Vue Router, createWebHistory. 
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+Router is used to created routes for my pages. To wrap text as a link and routes I'm suing router-link. To display a chosen page, section consists of router-view.
 
-## Customize configuration
 
-See [Vite Configuration Reference](https://vite.dev/config/).
 
 ## Project Setup
 
